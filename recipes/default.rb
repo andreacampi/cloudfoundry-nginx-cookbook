@@ -15,6 +15,7 @@ r.instance_eval do
   package_name 'nginx-extras'
 end
 
-template "nginx.conf" do
+r = resources('template[nginx.conf]')
+r.instance_eval do
   cookbook "cloudfoundry-nginx"
 end
