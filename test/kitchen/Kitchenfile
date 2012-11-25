@@ -1,0 +1,3 @@
+cookbook "cloudfoundry-nginx" do
+  runtimes []
+end
