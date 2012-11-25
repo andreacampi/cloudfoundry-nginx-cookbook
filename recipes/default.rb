@@ -8,6 +8,7 @@ apt_repository "nginx" do
   key "C300EE8C"
 end
 
+node.default['nginx']['default_site_enabled'] = false
 include_recipe "nginx"
 
 r = resources('package[nginx]')
