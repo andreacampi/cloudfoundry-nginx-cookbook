@@ -1,8 +1,21 @@
 Description
 ===========
 
+Install a customized version of nginx for use as a router in a
+[Cloud Foundry](http://www.cloudfoundry.org) installation.
+
 Requirements
 ============
+
+Platform
+--------
+
+* Ubuntu
+
+Tested on:
+
+* Ubuntu 10.04
+* Ubuntu 12.04
 
 Cookbooks
 ---------
@@ -10,11 +23,11 @@ Cookbooks
 * cloudfoundry
 * nginx
 
-Platform
---------
-
 Attributes
 ==========
+
+* `node['cloudfoundry_nginx']['user']` - The user under which the nginx daemon
+will run. Defaults to `node['cloudfoundry']['user']`.
 
 Usage
 =====
