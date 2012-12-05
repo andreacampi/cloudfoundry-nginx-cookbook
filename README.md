@@ -29,8 +29,18 @@ Attributes
 * `node['cloudfoundry_nginx']['user']` - The user under which the nginx daemon
 will run. Defaults to `node['cloudfoundry']['user']`.
 
+Advanced
+--------
+
+Advanced tuning attributes; change only if necessary.
+
+* `node['cloudfoundry_nginx']['variables_hash_max_size']` - The size of the
+hash table nginx uses to store variables. Defaults to `1024`.
+
 Usage
 =====
+
+This cookbook is used internally by other cookbooks that require nginx.
 
 License and Author
 ==================

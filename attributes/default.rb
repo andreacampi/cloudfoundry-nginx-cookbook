@@ -22,3 +22,4 @@
 include_attribute "cloudfoundry::user"
 
 default['cloudfoundry_nginx']['user'] = node['cloudfoundry']['user']
+default['cloudfoundry_nginx']['variables_hash_max_size'] = 1024;
