@@ -23,7 +23,7 @@ apt_repository "nginx" do
   uri "http://ppa.launchpad.net/nginx/stable/ubuntu"
   distribution dist_name
   components ["main"]
-  keyserver "keyserver.ubuntu.com"
+  keyserver "hkp://keyserver.ubuntu.com:80"
   key "C300EE8C"
 end
 
