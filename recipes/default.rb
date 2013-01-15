@@ -25,6 +25,13 @@ apt_repository "nginx" do
   components ["main"]
   keyserver "hkp://keyserver.ubuntu.com:80"
   key "C300EE8C"
+  notifies :run, "execute[apt-get-update-nginx]", :immediately
+end
+
+execute "apt-get-update-nginx" do
+  command "apt-get update"
+  ignore_failure true
+  action :nothing
 end
 
 node.default['nginx']['default_site_enabled'] = false
